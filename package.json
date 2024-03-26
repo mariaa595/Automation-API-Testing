@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress open"
+    "test": "npx cypress run --spec cypress/e2e/API.cy.js"
   },
   "keywords": [],
   "author": "",
