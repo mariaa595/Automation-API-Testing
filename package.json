@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --spec cypress/e2e/API.cy.js"
+    "testGet": "npx cypress run --spec cypress/e2e/GETAPI.cy.js",
+    "testPost": "npx cypress run --spec cypress/e2e/PostAPI.cy.js"
+
+
   },
   "keywords": [],
   "author": "",

@@ -19,7 +19,7 @@ describe('API Automation Test', () => {
       method:'GET', 
       url:'https://gorest.co.in/public/v2/users/',
       headers:{
-        Autorization:"d4ad2864a53460445608e94b80d392914d1ccfb3475eb2306ceafb7433f62d17"
+        Autorization:"Bearer d4ad2864a53460445608e94b80d392914d1ccfb3475eb2306ceafb7433f62d17"
       }
     })
     .then((response) => {
@@ -30,15 +30,15 @@ describe('API Automation Test', () => {
 it('Individual User',()=>{
   cy.request({
     method:'GET', 
-    url:'https://gorest.co.in/public/v2/users/6805319',
+    url:'https://gorest.co.in/public/v2/users/6805285',
     headers:{
-      Autorization:"d4ad2864a53460445608e94b80d392914d1ccfb3475eb2306ceafb7433f62d17"
+      Autorization:"Bearer d4ad2864a53460445608e94b80d392914d1ccfb3475eb2306ceafb7433f62d17"
     }
   })
   .then((response) => {
     cy.log(JSON.stringify(response))
     expect(response.status).to.eq(200)
-    expect(response.body.id).to.eq(6805319)
+    expect(response.body.id).to.eq(6805285)
 })
 })
 it('GET USER - Invalid URL',()=>{
@@ -46,7 +46,7 @@ it('GET USER - Invalid URL',()=>{
     method:'GET', 
     url:'https://gorest.co.in/public/v2/user',
     headers:{
-      Autorization:"d4ad2864a53460445608e94b80d392914d1ccfb3475eb2306ceafb7433f62d17"
+      Autorization:"Bearer d4ad2864a53460445608e94b80d392914d1ccfb3475eb2306ceafb7433f62d17"
     },
     failOnStatusCode: false
   })
@@ -61,7 +61,7 @@ it('GET USER - Invalid User',()=>{
     method:'GET', 
     url:'https://gorest.co.in/public/v2/users/23243',
     headers:{
-      Autorization:"d4ad2864a53460445608e94b80d392914d1ccfb3475eb2306ceafb7433f62d17"
+      Autorization:"Bearer d4ad2864a53460445608e94b80d392914d1ccfb3475eb2306ceafb7433f62d17"
     },
     failOnStatusCode: false
   })
