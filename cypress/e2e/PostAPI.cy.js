@@ -9,7 +9,7 @@ describe('POST calls',()=>{
             },
             body: {
                 "name": "AB Test 01",
-                "email": "tester595@yopmail.com",
+                "email": "tester59500@yopmail.com",
                 "gender": "female",
                 "status": "active"
             }
