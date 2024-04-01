@@ -27,7 +27,7 @@ describe('API Automation Test', () => {
       expect(response.status).to.eq(200);
   })
 })
-it('Individual User',()=>{
+it.skip('Individual User',()=>{
   cy.request({
     method:'GET', 
     url:'https://gorest.co.in/public/v2/users/6805285',

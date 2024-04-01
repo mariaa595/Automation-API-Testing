@@ -6,13 +6,14 @@
   "scripts": {
     "testGet": "npx cypress run --spec cypress/e2e/GETAPI.cy.js",
     "testPost": "npx cypress run --spec cypress/e2e/PostAPI.cy.js"
-
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.6.6"
+  },
+  "dependencies": {
+    "math.js": "^1.1.46"
   }
 }

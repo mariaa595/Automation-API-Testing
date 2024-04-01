@@ -1,5 +1,16 @@
+import math from 'math.js';
 describe('POST calls',()=>{
+    function generateEmail(){
+        
+        const randomString = Math.random().toString(36).substring(2, 10)
+        const email = randomString+"@example.com"
+        return email
+
+    }
     it(' POST CALL - JSON', () => {
+        let emailadress = generateEmail();
+        cy.log("Email address: " + emailadress)
+
         cy.request({
             method: 'POST',
             url: 'https://gorest.co.in/public/v2/users',
@@ -9,7 +20,7 @@ describe('POST calls',()=>{
             },
             body: {
                 "name": "AB Test 01",
-                "email": "tester59500@yopmail.com",
+                "email": emailadress,
                 "gender": "female",
                 "status": "active"
             }
