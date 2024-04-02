@@ -7,7 +7,7 @@ describe(' API Automation In Cypress', () => {
 
         let payload = {
             "name": "AB Automation Hub",
-            "email": "ABAutomationHub1021@dispostable.com",
+            "email": "ABAutomationHub10222@dispostable.com",
             "gender": "female",
             "status": "active"
         }
