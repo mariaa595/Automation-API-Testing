@@ -6,8 +6,8 @@
   "scripts": {
     "testGet": "npx cypress run --spec cypress/e2e/GETAPI.cy.js",
     "testPost": "npx cypress run --spec cypress/e2e/PostAPI.cy.js",
-    "testPut": "cypress run --spec cypress/e2e/PutAPI.cy.js",
-    "testDelete": "cypress run --spec cypress/e2e/DeleteAPI.cy.js",
+    "testPut": "npx cypress run --spec cypress/e2e/PutAPI.cy.js",
+    "testDelete": "npx cypress run --spec cypress/e2e/DeleteAPI.cy.js",
     "testflow": "npx cypress run --spec cypress/e2e/completeflow.cy.js"
   },
   "keywords": [],
