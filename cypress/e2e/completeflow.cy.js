@@ -6,23 +6,23 @@ describe(' API Automation In Cypress', () => {
 
 
         let payload = {
-            "name": "AB Automation Hub",
-            "email": "ABAutomationHub10222@dispostable.com",
+            "name": "tester",
+            "email": "tester595@yopmail.com",
             "gender": "female",
             "status": "active"
         }
 
 
-        cy.postAPI(payload).then((response) => {
+        cy.PostAPI(payload).then((response) => {
             expect(response.status).to.be.equal(201)
             let userId = response.body.id
-            cy.getAPI(userId).then((response) => {
+            cy.GETAPI(userId).then((response) => {
                 expect(response.status).to.be.equal(200)
             })
-            cy.putAPI(userId).then((response) => {
+            cy.PutAPI(userId).then((response) => {
                 expect(response.status).to.be.equal(200)
             })
-            cy.deleteAPI(userId).then((response) => {
+            cy.DeleteAPI(userId).then((response) => {
                 expect(response.status).to.be.equal(204)
             })
 

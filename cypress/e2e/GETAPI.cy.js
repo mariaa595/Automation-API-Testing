@@ -14,7 +14,7 @@ describe('API Automation Test', () => {
         expect(response.status).to.eq(200);
       })
   })
-  it('GET Users',()=>{
+  it.skip('GET Users',()=>{
     cy.request({
       method:'GET', 
       url:'https://gorest.co.in/public/v2/users/',
@@ -27,10 +27,10 @@ describe('API Automation Test', () => {
       expect(response.status).to.eq(200);
   })
 })
-it.skip('Individual User',()=>{
+it('Individual User',()=>{
   cy.request({
     method:'GET', 
-    url:'https://gorest.co.in/public/v2/users/6805285',
+    url:'https://gorest.co.in/public/v2/users/6819898',
     headers:{
       Autorization:"Bearer d4ad2864a53460445608e94b80d392914d1ccfb3475eb2306ceafb7433f62d17"
     }
@@ -38,7 +38,7 @@ it.skip('Individual User',()=>{
   .then((response) => {
     cy.log(JSON.stringify(response))
     expect(response.status).to.eq(200)
-    expect(response.body.id).to.eq(6805285)
+    expect(response.body.id).to.eq(6819898)
 })
 })
 it('GET USER - Invalid URL',()=>{
