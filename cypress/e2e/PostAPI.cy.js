@@ -11,7 +11,7 @@ describe('POST calls',()=>{
     it(' POST CALL - JSON', () => {
         let emailadress = generateEmail();
         let payload= {
-            "name": "AB Test 01",
+            "name": "Tester 01",
             "email": emailadress,
             "gender": "female",
             "status": "active"
@@ -29,7 +29,7 @@ describe('POST calls',()=>{
 
         }).then((response) => {
             expect(response.status).to.equal(201)
-            expect(response.body).has.property("name", "AB Test 01")
+            expect(response.body).has.property("name", "Tester 01")
             expect(response.body).has.property("gender", "female")
             expect(response.body).has.property("status", "active")
             expect(response.body.id).to.not.be.null
